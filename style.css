@@ -1,68 +1,67 @@
-html,body{
-  height: 100%;
+.forma {
+  animation-duration: 3s;
+  animation-name: Plavnosty;
 }
-#forma {
-	animation-duration: 1.5s;
-	animation-name: Animation;
-	position: absolute;
-	top: 50%;
-	left: 50%;
-	transform: translate(-50%, -50%);
-	background: #3b3f3f;
-	max-width: 600px;
-	width: 100%;
-	padding: 20px;
-	border-radius: 30px;
-	color:#fc8516;
+
+.popup {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.5);
+  transition: all 0.5s ease;
+  display: none;
+}
+
+.button {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.open_button{
+  height: 50px;
+  color: #fff;
+  font-size: 30px;
+  border: none;
+  background: #3ecec4;
+  border-radius: 5px;
+}
+
+
+.popup_open {
+  display: block;
+}
+
+.popup__container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  transform: translate(-50%, -50%);
+  background: #3ecec4;
+  color:#fff;
+  border-radius: 50px;
+  padding: 50px;
+}
+
+.forma button{
+  border-radius: 50px;
+}
+
+@keyframes Plavnosty {
+  from {
+    opacity: 0;
   }
-  
-  #forma.open {
-	display: block;
+  to {
+    opacity: 1;
   }
-  
-  .popup {
-	position: fixed;
-	width: 100%;
-	height: 100%;
-	top: 0;
-	left: 0;
-	background: #6d6d6d80;
-	transition: all 0.5s ease;
-	display: none;
+}
+
+@media screen and (min-width: 768px){
+  .popup__container {
+    width: auto;
   }
-  
-  .popup_open {
-	display: block;
-  }
-  @keyframes Animation {
-	from {
-	  opacity: 0;
-	}
-	to {
-	  opacity: 1;
-	}
-  }
-  .bttn
-  {
-	
-	height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-	font-size: 40px;
-  }
-  .bttn1
-  {
-	background-color: #3a3732;
-	color:#fc8516;
-  }
-  .sendbtn
-  {
-	width: 100%;
-	background: #fc8516;
-  }
- @media screen and (max-width: 768px){
-	.forma {
-	  width: auto;
-	}
-  }
+}
